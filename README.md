@@ -6,4 +6,5 @@ in this telegram bot script it takes messages from different groups you are adde
 3.add group or usser you want message forward from and also tell it the destination chat id 
 4.now run the script however you like
 
-please contact me if you have anny queries or awnt something to change  
+please contact me if you have anny queries or you want something to change  
+aditya244joshi@gmail.com
