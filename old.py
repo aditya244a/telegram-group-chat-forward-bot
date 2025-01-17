@@ -103,9 +103,9 @@ async def main():
         phone_number = input("Enter your Phone Number: ")
         write_credentials(api_id, api_hash, phone_number)
 
-    source_chat_ids = [-1002219547850, -1001714970545, -1002070576015, -1002066109808, -1002049726578, -1002009973126, -1001887840067, -1002153495628, -1002178264867, -1002082260829, -1002040949890, -1002158735564, -1002004412427, -1002112160675, -1001198046393, -1002007485926]
-    destination_channel_id = -1002385260002
-    topic_id = 49
+    source_chat_ids = ["group ids or chats id you want message forward from"]
+    destination_channel_id = "enter your source chat id"
+    topic_id = "enter your topic id where you want to forward it"
     keywords = []
 
     forwarder = TelegramForwarder(api_id, api_hash, phone_number, source_chat_ids, destination_channel_id, topic_id, keywords)
