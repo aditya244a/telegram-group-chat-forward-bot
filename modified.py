@@ -1,7 +1,6 @@
 import asyncio
 from telethon.sync import TelegramClient
 from telethon.errors import SessionPasswordNeededError, FloodWaitError
-from bot import run_bot  # Import run_bot from bot.py
 
 class TelegramForwarder:
     def __init__(self, api_id, api_hash, phone_number, source_chat_ids, destination_chat_id, keywords):
@@ -107,8 +106,7 @@ def write_credentials(api_id, api_hash, phone_number):
         file.write(phone_number + "\n")
 
 async def main():
-    import threading
-    threading.Thread(target=run_bot, daemon=True).start()
+    
 
     api_id, api_hash, phone_number = read_credentials()
     if api_id is None or api_hash is None or phone_number is None:
@@ -117,8 +115,8 @@ async def main():
         phone_number = input("Enter your Phone Number: ")
         write_credentials(api_id, api_hash, phone_number)
 
-    source_chat_ids = [-1002219547850, -1001714970545, -1002454028602, -1002066109808, -1002049726578, -1002009973126, -1001887840067, -1002153495628, -1002178264867, -1002082260829, -1002040949890, -1002158735564, -1002004412427, -1002112160675, -1001198046393, -1002007485926]
-    destination_chat_id = 7572384171
+    source_chat_ids = ["group ids or chats id you want message forward from"]
+    destination_chat_id = "your source chat id"
     keywords = []
 
     forwarder = TelegramForwarder(api_id, api_hash, phone_number, source_chat_ids, destination_chat_id, keywords)
